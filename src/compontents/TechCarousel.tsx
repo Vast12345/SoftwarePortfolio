@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import filemakerIcon from '../content/FileMaker_icon_1200.png';
 
 const TechCarousel = () => {
   const technologies = [
@@ -8,7 +9,7 @@ const TechCarousel = () => {
     { name: 'Java', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg' },
     { name: 'Spring', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg' },
     { name: 'Git', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg' },
-    { name: 'Filemaker', icon: 'src/content/FileMaker_icon_1200.png' },
+    { name: 'Filemaker', icon: filemakerIcon },
   ];
 
   // Duplicate the array to create a seamless loop
