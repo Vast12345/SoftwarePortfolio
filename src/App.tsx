@@ -1,4 +1,7 @@
 import React from 'react';
+import vetImage from './content/Screenshot 2024-10-24 081412.png';
+import motorellaImage from './content/Screenshot 2024-10-24 081801.png';
+import tiendaImage from './content/Screenshot 2024-10-24 083354.png';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import TechCarousel from './compontents/TechCarousel';
@@ -115,19 +118,19 @@ function App() {
             <Project
               title="Vet Store"
               description="A full-stack Vet Shop which utlizes Javascript, Bulma CSS, and Firebase."
-              image="src\content\Screenshot 2024-10-24 081412.png"
+              image={vetImage}
               link="https://vast12345.github.io/Veteninario/"
             />
             <Project
               title="Mock Motorella Website"
               description="Creating my own mock Motorella webpage as a tribute using Javascript."
-              image="src\content\Screenshot 2024-10-24 081801.png"
+              image={motorellaImage}
               link="https://vast12345.github.io/Motorella/"
             />
             <Project
               title="Weather Dashboard"
               description="Small project which utilizses React, MySQL, and Springboot to create a small store."
-              image="src\content\Screenshot 2024-10-24 083354.png"
+              image={tiendaImage}
               link="https://vast12345.github.io/react-tienda/"
             />
           </div>
@@ -177,10 +180,10 @@ function App() {
               </button>
             </form>
             <div className="flex justify-center space-x-6 mt-12">
-              <a href="https://github.com/Vast12345" className="text-primary-300 hover:text-white transition-colors">
+              <a href="https://github.com/Vast12345" target='_blank' className="text-primary-300 hover:text-white transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://www.linkedin.com/in/lorenzo-lopez-764b2a2a0/" className="text-primary-300 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/lorenzo-lopez-764b2a2a0/" target='_blank' className="text-primary-300 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
               <a href="mailto:vastprogramming@email.com" className="text-primary-300 hover:text-white transition-colors">
