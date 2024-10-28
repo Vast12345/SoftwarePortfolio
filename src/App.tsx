@@ -155,7 +155,7 @@ function App() {
               link="https://vast12345.github.io/Motorella/"
             />
             <Project
-              title="Weather Dashboard"
+              title="Product Store"
               description="Small project which utilizses React, MySQL, and Springboot to create a small store."
               image={tiendaImage}
               link="https://vast12345.github.io/react-tienda/"
