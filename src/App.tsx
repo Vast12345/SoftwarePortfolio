@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
 import vetImage from './content/Screenshot 2024-10-24 081412.png';
 import motorellaImage from './content/Screenshot 2024-10-24 081801.png';
 import tiendaImage from './content/Screenshot 2024-10-24 083354.png';
@@ -43,6 +44,29 @@ function Project({ title, description, image, link }: { title: string; descripti
 }
 
 function App() {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_ueb30h7',
+        'template_ph2dl1k',
+        e.currentTarget,
+        '9cZniboFOubF3Miv8'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.error(error.text);
+          alert("An error occurred, please try again.");
+        }
+      );
+
+    e.currentTarget.reset();
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -144,12 +168,13 @@ function App() {
         <div className="container mx-auto px-6 py-20">
           <h2 className="text-4xl font-bold mb-12 text-center">Get in Touch</h2>
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
+                  name='user_name'
                   className="w-full px-4 py-3 rounded-lg bg-primary-700/30 border border-primary-500 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   placeholder="Your name"
                 />
@@ -159,6 +184,7 @@ function App() {
                 <input
                   type="email"
                   id="email"
+                  name='user_email'
                   className="w-full px-4 py-3 rounded-lg bg-primary-700/30 border border-primary-500 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   placeholder="your@email.com"
                 />
@@ -167,6 +193,7 @@ function App() {
                 <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                 <textarea
                   id="message"
+                  name='message'
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-primary-700/30 border border-primary-500 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   placeholder="Your message"
@@ -175,6 +202,7 @@ function App() {
               <button
                 type="submit"
                 className="w-full bg-primary-500 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+
               >
                 Send Message
               </button>
