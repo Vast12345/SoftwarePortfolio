@@ -90,6 +90,9 @@ function App() {
               <a href="#projects" className="border border-primary-500 text-primary-300 hover:bg-primary-500 hover:text-white px-6 py-3 rounded-lg transition-colors">
                 View Projects
               </a>
+              <a href="Lorenzo_Lopez_Mendez.pdf" download="Lorenzo_Lopez_CV.pdf" className="border border-primary-500 text-primary-300 hover:bg-primary-500 hover:text-white px-6 py-3 rounded-lg transition-colors">
+                CV
+              </a>
             </div>
           </motion.div>
         </div>
